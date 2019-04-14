@@ -1,2 +1,2 @@
 # DenseInception
-A new Architecture (Experimental)
+A new CNN Architecture (Experimental)
