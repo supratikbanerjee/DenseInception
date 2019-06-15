@@ -23,16 +23,6 @@ log_interval = 20
 best_acc = 0
 best_epoch = 0
 
-'''def plot_data(data, label, text):
-    for i in range(10):
-        plt.subplot(4, 3, i + 1)
-        plt.tight_layout()
-        plt.imshow(data[i][0], cmap='gray', interpolation='none')
-        plt.title(text + ": {}".format(label[i]))
-        plt.xticks([])
-        plt.yticks([])
-    plt.show()'''
-
 
 def save_predictions(model, device, test_loader, path):
     model.eval()
@@ -141,10 +131,7 @@ def main():
                                           transforms.ToTensor(),
                                           transforms.Normalize((0.2868,), (0.1258,))
                                       ]))
-    # image_means1 = torch.stack([t.mean(1).mean(1) for t, c in train_data])
-    # print(image_means1.mean(0),image_means1.std(0))
-    # image_means2 = torch.stack([t.mean(1).mean(1) for t, c in test_data])
-    # print(image_means2.mean(0),image_means2.std(0))
+
 
     # data loaders
     kwargs = {'num_workers': 4 * gpu_count, 'pin_memory': True} if use_cuda else {}
