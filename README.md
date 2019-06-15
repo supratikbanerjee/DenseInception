@@ -1,3 +1,3 @@
 # DenseInception
 A new CNN Architecture (Experimental)
-Article Coming Soon
+Further experimental details and results will be posted soon
